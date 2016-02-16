@@ -46,20 +46,18 @@ public class MainMapActivity extends AppCompatActivity implements OnMapReadyCall
   public void onMapReady(final GoogleMap googleMap) {
     mMap = googleMap;
 
-    // Set Initial position of marker
+    // Setup map features and starting position and zoom level
     mMap.setTrafficEnabled(true);
     mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(53.510138, -7.865643)));
     mMap.animateCamera(CameraUpdateFactory.zoomTo(6.7f));
 
     // Download markers from api
     updateMapData();
-    // Show loading
+    // TODO Show loading
 
-    // Add a marker for users location
-    // Add markers for all incidents
-
+    // Get location and set default pin
     final LatLng office = new LatLng(54.266077, -8.453736);
-    mMap.addMarker(new MarkerOptions().position(office).title("Marker at Office"));
+    mMap.addMarker(new MarkerOptions().position(office).title("You are here!"));
   }
 
   private void updateMapData() {
@@ -76,6 +74,12 @@ public class MainMapActivity extends AppCompatActivity implements OnMapReadyCall
         final Type listType = new TypeToken<List<Incident>>() {}.getType();
         final List<Incident> incidents = gson.fromJson(response, listType);
         Log.v("Volley", "Number of Incidents " + incidents.size());
+        // Add a marker for users location
+          for (Incident incident: incidents) {
+              mMap.addMarker(new MarkerOptions().position(new LatLng(incident.getLatitude(), incident.getLongitude())).title
+                      (incident.getReport()));
+          }
+        // Add markers for all incidents
       }
     }, new Response.ErrorListener() {
       @Override

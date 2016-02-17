@@ -1,156 +1,188 @@
 package com.roadwatch.gcarroll.irishroadwatchlive.incident;
 
-import java.util.Date;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by gcarroll on 16/02/2016.
- */
 public class Incident {
 
-  private String area;
+  @SerializedName("Area")
+  @Expose
+  private String Area;
 
-  private int id;
+  @SerializedName("ID")
+  @Expose
+  private Integer ID;
 
-  private int incidentTypeId;
+  @SerializedName("IncidentTypeID")
+  @Expose
+  private Integer IncidentTypeID;
 
-  private Double latitude;
+  @SerializedName("Latitude")
+  @Expose
+  private Double Latitude;
 
-  private String location;
+  @SerializedName("Location")
+  @Expose
+  private String Location;
 
-  private Double longitude;
+  @SerializedName("Longitude")
+  @Expose
+  private Double Longitude;
 
-  private String report;
+  @SerializedName("Report")
+  @Expose
+  private String Report;
 
-  private String title;
+  @SerializedName("Title")
+  @Expose
+  private String Title;
 
-  private Date updatedAt;
+  @SerializedName("UpdatedAt")
+  @Expose
+  private String UpdatedAt;
 
-  private int zoomLevel;
+  @SerializedName("ZoomLevel")
+  @Expose
+  private Integer ZoomLevel;
 
+  /**
+   * @return The Area
+   */
   public String getArea() {
-    return area;
+    return Area;
   }
 
-  public void setArea(final String area) {
-    this.area = area;
+  /**
+   * @param Area The Area
+   */
+  public void setArea(final String Area) {
+    this.Area = Area;
   }
 
-  public int getId() {
-    return id;
+  /**
+   * @return The ID
+   */
+  public Integer getID() {
+    return ID;
   }
 
-  public void setId(final int id) {
-    this.id = id;
+  /**
+   * @param ID The ID
+   */
+  public void setID(final Integer ID) {
+    this.ID = ID;
   }
 
-  public int getIncidentTypeId() {
-    return incidentTypeId;
+  /**
+   * @return The IncidentTypeID
+   */
+  public Integer getIncidentTypeID() {
+    return IncidentTypeID;
   }
 
-  public void setIncidentTypeId(final int incidentTypeId) {
-    this.incidentTypeId = incidentTypeId;
+  /**
+   * @param IncidentTypeID The IncidentTypeID
+   */
+  public void setIncidentTypeID(final Integer IncidentTypeID) {
+    this.IncidentTypeID = IncidentTypeID;
   }
 
+  /**
+   * @return The Latitude
+   */
   public Double getLatitude() {
-    return latitude;
+    return Latitude;
   }
 
-  public void setLatitude(final Double latitude) {
-    this.latitude = latitude;
+  /**
+   * @param Latitude The Latitude
+   */
+  public void setLatitude(final Double Latitude) {
+    this.Latitude = Latitude;
   }
 
+  /**
+   * @return The Location
+   */
   public String getLocation() {
-    return location;
+    return Location;
   }
 
-  public void setLocation(final String location) {
-    this.location = location;
+  /**
+   * @param Location The Location
+   */
+  public void setLocation(final String Location) {
+    this.Location = Location;
   }
 
+  /**
+   * @return The Longitude
+   */
   public Double getLongitude() {
-    return longitude;
+    return Longitude;
   }
 
-  public void setLongitude(final Double longitude) {
-    this.longitude = longitude;
+  /**
+   * @param Longitude The Longitude
+   */
+  public void setLongitude(final Double Longitude) {
+    this.Longitude = Longitude;
   }
 
+  /**
+   * @return The Report
+   */
   public String getReport() {
-    return report;
+    return Report;
   }
 
-  public void setReport(final String report) {
-    this.report = report;
+  /**
+   * @param Report The Report
+   */
+  public void setReport(final String Report) {
+    this.Report = Report;
   }
 
+  /**
+   * @return The Title
+   */
   public String getTitle() {
-    return title;
+    return Title;
   }
 
-  public void setTitle(final String title) {
-    this.title = title;
+  /**
+   * @param Title The Title
+   */
+  public void setTitle(final String Title) {
+    this.Title = Title;
   }
 
-  public Date getUpdatedAt() {
-    return updatedAt;
+  /**
+   * @return The UpdatedAt
+   */
+  public String getUpdatedAt() {
+    return UpdatedAt;
   }
 
-  public void setUpdatedAt(final Date updatedAt) {
-    this.updatedAt = updatedAt;
+  /**
+   * @param UpdatedAt The UpdatedAt
+   */
+  public void setUpdatedAt(final String UpdatedAt) {
+    this.UpdatedAt = UpdatedAt;
   }
 
-  public int getZoomLevel() {
-    return zoomLevel;
+  /**
+   * @return The ZoomLevel
+   */
+  public Integer getZoomLevel() {
+    return ZoomLevel;
   }
 
-  public void setZoomLevel(final int zoomLevel) {
-    this.zoomLevel = zoomLevel;
-  }
-
-  @Override
-  public boolean equals(final Object o) {
-    if (this == o)
-      return true;
-    if (o == null || getClass() != o.getClass())
-      return false;
-
-    final Incident incident = (Incident) o;
-
-    if (id != incident.id)
-      return false;
-    if (incidentTypeId != incident.incidentTypeId)
-      return false;
-    if (zoomLevel != incident.zoomLevel)
-      return false;
-    if (!area.equals(incident.area))
-      return false;
-    if (!latitude.equals(incident.latitude))
-      return false;
-    if (!location.equals(incident.location))
-      return false;
-    if (!longitude.equals(incident.longitude))
-      return false;
-    if (!report.equals(incident.report))
-      return false;
-    if (!title.equals(incident.title))
-      return false;
-    return updatedAt.equals(incident.updatedAt);
-
-  }
-
-  @Override
-  public int hashCode() {
-    int result = area.hashCode();
-    result = 31 * result + id;
-    result = 31 * result + incidentTypeId;
-    result = 31 * result + latitude.hashCode();
-    result = 31 * result + location.hashCode();
-    result = 31 * result + longitude.hashCode();
-    result = 31 * result + report.hashCode();
-    result = 31 * result + title.hashCode();
-    result = 31 * result + updatedAt.hashCode();
-    result = 31 * result + zoomLevel;
-    return result;
+  /**
+   * @param ZoomLevel The ZoomLevel
+   */
+  public void setZoomLevel(final Integer ZoomLevel) {
+    this.ZoomLevel = ZoomLevel;
   }
 
 }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu>
+    <!--<item android:title="@string/drawer_menu_nav_title">-->
+    <!--<menu>-->
+    <!--<item-->
+    <!--android:id="@+id/action_main"-->
+    <!--android:title="@string/drawer_menu_home"/>-->
+    <!--<item-->
+    <!--android:id="@+id/national_sum"-->
+    <!--android:title="@string/drawer_menu_sum"/>-->
+    <!--<item-->
+    <!--android:id="@+id/county_traffic"-->
+    <!--android:title="@string/drawer_menu_county"/>-->
+    <!--<item-->
+    <!--android:id="@+id/dublin_traffic"-->
+    <!--android:title="@string/drawer_menu_dublin_traffic"/>-->
+    <!--<item-->
+    <!--android:id="@+id/dublin_cameras"-->
+    <!--android:title="@string/drawer_menu_dublin_cams"/>-->
+    <!--<item-->
+    <!--android:id="@+id/city_parking"-->
+    <!--android:title="@string/drawer_menu_parking"/>-->
+    <!--</menu>-->
+    <!--</item>-->
+
+
+    <!--<item android:title="@string/drawer_menu_other">-->
+    <!--<menu>-->
+    <!--<item-->
+    <!--android:id="@+id/give_rating"-->
+    <!--android:title="@string/drawer_menu_rate"/>-->
+    <!--<item-->
+    <!--android:id="@+id/about"-->
+    <!--android:title="@string/drawer_menu_about"/>-->
+    <!--</menu>-->
+    <!--</item>-->
+</menu>

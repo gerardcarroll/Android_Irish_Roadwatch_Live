@@ -1,4 +1,29 @@
 <resources>
     <string name="app_name">Irish Roadwatch Live</string>
     <string name="title_activity_main_map">MainMap</string>
+
+
+    <!-- Drawer Menu Names -->
+    <string-array name="menu_array">
+        <item>Home</item>
+        <item>National Summary</item>
+        <item>County Traffic</item>
+        <item>Dublin Traffic</item>
+        <item>Dublin Cameras</item>
+        <item>City Parking</item>
+    </string-array>
+    <!--
+    <string name="drawer_menu_nav_title">Nav</string>
+    <string name="drawer_menu_home">Home</string>
+    <string name="drawer_menu_sum">National Summary</string>
+    <string name="drawer_menu_county">County Traffic</string>
+    <string name="drawer_menu_dublin_traffic">Dublin Traffic</string>
+    <string name="drawer_menu_dublin_cams">Dublin Cameras</string>
+    <string name="drawer_menu_parking">City Parking</string>
+    <string name="drawer_menu_other">Other</string>
+    <string name="drawer_menu_rate">Rate</string>
+    <string name="drawer_menu_about">About</string> -->
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 </resources>

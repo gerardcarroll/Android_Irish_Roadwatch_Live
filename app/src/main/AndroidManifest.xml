@@ -9,6 +9,7 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <!-- Permissions Required to Display a Map -->
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -41,7 +42,7 @@
             android:value="@string/google_maps_key"/>
 
         <activity
-            android:name=".MainMapActivity">
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
